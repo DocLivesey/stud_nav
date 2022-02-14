@@ -1,16 +1,13 @@
-#app:
-#  datasource:
-#    url: jdbc:mariadb://${MYSQL_HOST:localhost}:3306/student
-#    user: spring
-#    password: pass
-#    driver-class-name: org.mariadb.jdbc.Driver
 server:
   port: 9888
 spring:
   jpa:
     generate-ddl: true
+    show-sql: true
   datasource:
     url: jdbc:mariadb://localhost:3306/student
     username: spring
     password: pass
     driver-class-name: org.mariadb.jdbc.Driver
+  freemarker:
+    expose-request-attributes: true

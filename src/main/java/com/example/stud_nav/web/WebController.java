@@ -21,12 +21,6 @@ public class WebController {
     }
 
 
-
-    @GetMapping("/user")
-    public String user(){
-        return ("Welcome User");
-    }
-
     @GetMapping("/registration")
     public String register(){
         return "register";
