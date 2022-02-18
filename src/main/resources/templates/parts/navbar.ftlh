@@ -14,13 +14,15 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="/login">Login</a>
                 </li>
-                <#if isAdmin>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/admin">Admin</a>
-                </li>
-                </#if>
+<#--                <#if isAdmin>-->
+<#--                <li class="nav-item">-->
+<#--                    <a class="nav-link" aria-current="page" href="/admin">Admin</a>-->
+<#--                </li>-->
+<#--                </#if>-->
             </ul>
         </div>
+        <#if name != "unknown">
         <div class="navbar-text">${name}</div>
+        </#if>
     </div>
 </nav>

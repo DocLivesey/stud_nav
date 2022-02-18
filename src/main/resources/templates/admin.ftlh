@@ -19,4 +19,22 @@
         </#list>
         </tbody>
     </table>
+
+
+        <div class="form-group mt-3">
+            <form method="post" action="/admin/news" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="header" placeholder="Заголовок новости" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="body" placeholder="Тело нвости">
+                </div>
+                <input type="hidden" name="_csrf" value="${_csrf.token}" />
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Добавить</button>
+                </div>
+            </form>
+        </div>
+
 </@c.page>
+

@@ -20,6 +20,8 @@ public class Course {
 
     private Long semesters;
 
+    private String speciality;
+
     @ManyToMany
     @JoinTable(
             name = "course_subject",
@@ -62,5 +64,13 @@ public class Course {
 
     public void setSubject(Set<Subject> subject) {
         this.subject = subject;
+    }
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
     }
 }

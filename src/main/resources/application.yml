@@ -3,7 +3,6 @@ server:
 spring:
   jpa:
     generate-ddl: true
-    show-sql: true
   datasource:
     url: jdbc:mariadb://localhost:3306/student
     username: spring
