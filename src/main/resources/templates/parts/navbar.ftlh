@@ -1,4 +1,5 @@
 <#include "security.ftlh">
+<#import "common.ftlh" as c>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -12,17 +13,17 @@
                     <a class="nav-link" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/login">Login</a>
+                    <a class="nav-link" aria-current="page" href="/news">News</a>
                 </li>
-<#--                <#if isAdmin>-->
-<#--                <li class="nav-item">-->
-<#--                    <a class="nav-link" aria-current="page" href="/admin">Admin</a>-->
-<#--                </li>-->
-<#--                </#if>-->
+                <#if isAdmin>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/admin">Admin</a>
+                </li>
+                </#if>
             </ul>
         </div>
-        <#if name != "unknown">
-        <div class="navbar-text">${name}</div>
-        </#if>
+
+        <div class="navbar-text me-3" <#if !user??>type="hidden"</#if> > <#if user??>${name}</#if></div>
+        <@c.logout />
     </div>
 </nav>

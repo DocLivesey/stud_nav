@@ -20,6 +20,8 @@ public class Course {
 
     private Long semesters;
 
+    private String learningForm;
+
     private String speciality;
 
     @ManyToMany
@@ -72,5 +74,13 @@ public class Course {
 
     public void setSpeciality(String speciality) {
         this.speciality = speciality;
+    }
+
+    public String getLearningForm() {
+        return learningForm;
+    }
+
+    public void setLearningForm(String learningForm) {
+        this.learningForm = learningForm;
     }
 }
